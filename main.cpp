@@ -76,10 +76,13 @@ int main(int argc, char** argv) {
     vf4 vec4{ 2.0, 2.0, 2.0, 1.0 };
     vec4 = xlat_m * vec4;
     print_out(vec4, "vector 4 xlated = ");
+    cout << '\n';
 
     // use of mref
     float fmat[4][4];
     mref(fmat) = identity_mat<float, 4>();
+    cout << "demonstrates the usage of mref\n" <<
+         "('converts' matrix library type to pod structure for use in GL\n";
     print_out(mref(fmat), "pod struct = ");
 
     return 0;
