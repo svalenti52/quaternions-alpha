@@ -81,8 +81,10 @@ int main(int argc, char** argv) {
     // use of mref
     float fmat[4][4];
     mref(fmat) = identity_mat<float, 4>();
-    cout << "demonstrates the usage of mref\n" <<
-         "('converts' matrix library type to pod structure for use in GL\n";
+    cout << "float fp_mat[4][4] is declared and then mref is used to assign\n"
+         << "a matching quaternion library object to it, e.g.,\n"
+         << "mref(fp_mat) = identity_mat<float, 4>();\n";
+    cout << "The fp_mat can be passed to GL library functions.\n";
     print_out(mref(fmat), "pod struct = ");
 
     return 0;
